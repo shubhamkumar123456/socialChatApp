@@ -1,0 +1,24 @@
+
+
+
+.followingsPage{
+    width: 80%;
+    margin: auto;
+    background: #3D7EAA;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #FFE47A, #3D7EAA);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #FFE47A, #3D7EAA);
+    margin-top: 100px;
+
+}
+.userBox{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 5px auto;
+}
+
+.profilePicture{
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+}

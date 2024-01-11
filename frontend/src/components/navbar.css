@@ -1,0 +1,52 @@
+.billo{
+    background-color: red;
+    width: 100%;
+    height: 100px
+}
+.hello{
+    background-color: green;
+    width: 100%;
+    height: 100px
+}
+.accountImg{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+.threeDots{
+    position: relative;
+  
+}
+.threeDotsInside{
+    position: absolute;
+  
+    list-style: none;
+    right: 0%;
+    top: 132%;
+    
+    text-align: center;
+    height: max-content;
+    padding: 0;
+}
+.threeDotsInside li a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+.threeDotsInside li{
+    background: rgb(34,193,195);
+    background: linear-gradient(258deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+    padding: 20px;
+    width: 150px;
+
+    text-decoration: none;
+    border-bottom: 1px solid green;
+}
+@media only screen and (max-width: 1000px){
+    .threeDots{
+        position: absolute;
+        right: 30px;
+        top: 15px;
+    }
+}

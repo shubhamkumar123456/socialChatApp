@@ -1,0 +1,116 @@
+.chatComponent{
+    width: 100%;
+    min-height: 90vh;
+    /* background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9wF6-V_Q-X1sX6CId1iLnZoSBVH42onXaSm1z5iZoUXLsPx8aBQPBO0XweKb78cKK9Xc&usqp=CAU); */
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    /* background: rgb(218,182,240);
+    background: linear-gradient(90deg, rgba(218,182,240,1) 0%, rgba(129,238,77,1) 100%); */
+    display: flex;
+    margin-top: 5px;
+    gap: 10px;
+}
+.chatCompontnLeft{
+    width: 20%;
+    background-color: rgba(212, 195, 38, 0.749);
+}
+.chatCompontnRight{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.chatComponentChatBox{
+    width: 100%;
+    height: 100%;
+    /* border: 2px solid aqua; */
+    display: flex;
+    flex-direction: column;
+    /* box-shadow: 0 0 10px 2px aqua; */
+}
+.chatComponentHeader{
+    width: 100%;
+    background: rgb(34,193,195);
+    background: linear-gradient(258deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+.friendProfilePic{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    
+}
+.friendName{
+    color: black;
+    margin-left: 20px;
+    text-transform: capitalize;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 900;
+    font-size: 25px;
+}
+
+.chatComponentFooter{
+    width: 100%;
+    height: 3.5rem;
+    background-color: grey;
+}
+.chatComponentInput{
+    width: 90%;
+    padding: 10px;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    height: 3.5rem;
+    border-top: 1px solid grey;
+}
+.chatComponentSendBtn{
+    width: 10%;
+    height: 100%;
+    border: none;
+    background-color: brown;
+    color: white;
+    cursor: pointer;
+}
+.chatComponentContent{
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    /* overflow-y: scroll; */
+    width: 100%;
+    height: 500px;
+    /* padding: 10px; */
+}
+.chatComponentchats{
+    /* width: 500px; */
+    min-height: 50px;
+    height: max-content;
+    margin:30px 20px;
+
+}
+.chatComponentMsgRight{
+    background-color: lightseagreen;
+    border-radius: 5px;
+    padding: 10px;
+    width: max-content;
+    float:right;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    flex-direction: end;
+    margin-bottom: 20px;
+}
+.chatComponentMsgLeft{
+    
+    background-color: rgba(212, 177, 4, 0.89);
+    border-radius: 5px;
+    padding: 10px;
+    max-width: 500px;
+    float: left;
+  
+    display: flex;
+    align-items: center;
+    flex-direction: end;
+}

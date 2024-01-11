@@ -1,0 +1,169 @@
+.navbar{
+    display: flex;
+    width: 100%;
+    background: rgb(34,193,195);
+    background: linear-gradient(258deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    /* opacity: 0.5; */
+    
+    height: 4rem;
+    padding: 10px 40px;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    color: #f60;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 900;
+/* font-family: 'Playpen Sans', cursive; */
+    
+}
+.logo{
+    width: 200px;
+    height: 3rem;
+}
+.searchForm{
+    width: 300px; 
+    /* background-color: #f60;  */
+    position: relative; 
+    display: flex;
+    align-items: center;
+    margin-right: 100px;
+    position: relative;
+}
+.datalist{
+    position: absolute;
+    top: 100%;
+    background-color: white;
+    width: 80%;
+    left: 10px;
+}
+.data{
+    border-bottom: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px 5px;
+    margin-top: 25px;
+    color: #f60;
+}
+.dataPic{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.searchFriendCloseIcon{
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
+.searchIcon{
+    position: absolute;
+    right: 10px;
+    color: #f60;
+    cursor: pointer;
+    border-left: 1px solid lightgray;
+    padding-left: 10px;
+   
+}
+.searchInput{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    
+}
+
+.navList{
+    list-style: none;
+    display: flex;
+    height: 100%;
+    width: max-content;
+    gap: 40px;
+    font-size: 25px;
+    align-items: center;
+    /* background-color: yellow; */
+    /* margin-left: 350px; */
+}
+.navListLink{
+    text-decoration: none;
+    color: black;
+    position: relative;
+    width: 100%;
+    /* background-color: green; */
+}
+.navListLink::after{
+    content: '';
+    position: absolute;
+   
+    width: 0%;
+    height: 3px;
+    background-color: red;
+    color: red;
+    bottom: -5px;
+    left: 0;
+    z-index: 10;
+}
+.navListLink:hover::after{
+    /* transform: rotate(360deg); */
+    width: 100%;
+    transition: 0.5s linear;
+}
+.accountProfile{
+    display: none;
+}
+.menuBar{
+    display: none;
+}
+.show{
+    display: block
+}
+.hide{
+    display: none;
+}
+
+
+@media only screen and (max-width: 1110px) {
+   .searchForm{
+    margin: 0;
+    padding: 0;
+   }
+  }
+
+  @media only screen and (max-width: 1000px){
+    .navbar{
+        position: relative;
+        min-width: 300px;
+        margin: 0;
+        
+    }
+    .menuBar{
+        display: block;
+    }
+    .navList{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        background-color: #f60;
+
+        height: 350px;
+        left: 0;
+    }
+    .navListLi{
+     margin: auto;
+  
+    }
+    .datalist{
+        z-index: 9999;
+    }
+
+ 
+  }
+

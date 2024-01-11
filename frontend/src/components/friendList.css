@@ -1,0 +1,33 @@
+.friendListComponentHeading{
+
+text-align: center;
+width: 100%;
+height: 70px;
+display: flex;
+justify-content: center;
+align-items: center;
+background: rgb(34,193,195);
+
+}
+
+.friendListComponentUser{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+    text-decoration: none;
+    color: black;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.friendListComponentImg{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+.friendListComponentName{
+    text-transform: capitalize;
+}
