@@ -117,7 +117,7 @@ useEffect(()=>{
             createdAt:Date.now(),
         })
     })
-},[handleSendMessage,arrivalMsg])
+},[handleSendMessage,arrivalMsg,msgSent])
 console.log(arrivalMsg)
 
 const [showSidebar, setshowSidebar] = useState(false);
