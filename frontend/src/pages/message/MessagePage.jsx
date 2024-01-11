@@ -6,7 +6,7 @@ const MessagePage = () => {
 
     useEffect(()=>{
         const getMessages = async()=>{
-            let res = await fetch('http://localhost:2000/api/messages/allMessage',{
+            let res = await fetch('https://socialbackend2.onrender.com/api/messages/allMessage',{
                 method:"POST",
                 headers:{
                     'content-type': 'application/json'

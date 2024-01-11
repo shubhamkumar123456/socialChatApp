@@ -19,7 +19,7 @@ const ChatBoxx = (props) => {
  
 
     const cachedFn = useCallback(async()=>{
-        let res = await fetch(`http://localhost:2000/api/messages/${converSationId}`);
+        let res = await fetch(`https://socialbackend2.onrender.com/api/messages/${converSationId}`);
         let data = await res.json();
         console.log(data)
         setmessages(data)

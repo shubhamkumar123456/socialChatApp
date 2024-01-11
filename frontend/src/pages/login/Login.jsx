@@ -16,7 +16,7 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault()
     try {
-      let response = await fetch('http://localhost:2000/api/users/login', {
+      let response = await fetch('https://socialbackend2.onrender.com/api/users/login', {
         method: 'POST',
         headers: {
           'content-type': 'application/json'

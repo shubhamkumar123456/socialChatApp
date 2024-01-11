@@ -10,7 +10,7 @@ const initialState = {
 
 export const fetchUser = createAsyncThunk('fetchuser',async()=>{
     let email = JSON.parse(localStorage.getItem('login')).email;
-    let response = await fetch('http://localhost:2000/api/users/getone', {
+    let response = await fetch('https://socialbackend2.onrender.com/api/users/getone', {
         method: 'POST',
         headers: {
           'content-type': 'application/json'

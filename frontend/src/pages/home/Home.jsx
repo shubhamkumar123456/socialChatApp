@@ -40,7 +40,7 @@ const Home = () => {
   const handlePost =async()=>{
     let input = inputRef.current.value
     console.log("inputValue",inputValue)
-    let response = await fetch('http://localhost:2000/api/posts/create',{
+    let response = await fetch('https://socialbackend2.onrender.com/api/posts/create',{
       method:"POST",
       headers:{
           'content-type':'application/json'
@@ -60,7 +60,7 @@ const Home = () => {
 
   useEffect(()=>{
     const fetchTimeLinePost = async()=>{
-      let res = await fetch('http://localhost:2000/api/users/timeLinePosts',{
+      let res = await fetch('https://socialbackend2.onrender.com/api/users/timeLinePosts',{
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({"_id":getUser.user._id})

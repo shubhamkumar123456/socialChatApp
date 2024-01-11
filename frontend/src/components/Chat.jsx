@@ -21,7 +21,7 @@ const [changed, setchanged] = useState(false);
     useEffect(()=>{
         setchanged(!changed)
     },[currentUser,friendUser])
-    const ENDPOINT = 'http://localhost:2000/'
+    const ENDPOINT = 'https://socialbackend2.onrender.com/'
 
     const [arrivalMsg, setarrivalMsg] = useState(null);
   
@@ -55,7 +55,7 @@ useEffect(()=>{
 
 useEffect(()=>{
     const createConversation =async()=>{
-        let res = await fetch('http://localhost:2000/api/conversation/create',{
+        let res = await fetch('https://socialbackend2.onrender.com/api/conversation/create',{
             method: 'POST',
             headers:{
               'content-type': 'application/json'
@@ -92,7 +92,7 @@ const handleSendMessage = async()=>{
    })
      
 
-    let res = await fetch(`http://localhost:2000/api/messages/create`,{
+    let res = await fetch(`https://socialbackend2.onrender.com/api/messages/create`,{
         method: 'POST',
         headers: {
             'content-type': 'application/json',

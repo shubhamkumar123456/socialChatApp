@@ -15,7 +15,7 @@ const handleSignup =async(e)=>{
   e.preventDefault()
  
 try {
-  let response = await fetch('http://localhost:2000/api/users/create',{
+  let response = await fetch('https://socialbackend2.onrender.com/api/users/create',{
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'

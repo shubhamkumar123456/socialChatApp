@@ -31,7 +31,7 @@ const Navbar = () => {
     e.preventDefault();
     setclicked(true)
     // console.log(inputRef.current.value)
-    let response = await fetch('http://localhost:2000/api/users/searchUsers', {
+    let response = await fetch('https://socialbackend2.onrender.com/api/users/searchUsers', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'

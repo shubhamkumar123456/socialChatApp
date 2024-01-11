@@ -29,7 +29,7 @@ useEffect(()=>{
     const handleDelete =async(post)=>{
         
         console.log(post._id)
-        let response = await fetch('http://localhost:2000/api/posts/delete',{
+        let response = await fetch('https://socialbackend2.onrender.com/api/posts/delete',{
             method: 'DELETE',
             headers:{
                 'content-type': 'application/json'
@@ -42,7 +42,7 @@ useEffect(()=>{
     }
 
     const profileSubmitHandler=async()=>{
-        let response = await fetch('http://localhost:2000/api/posts/updateProfilePic',{
+        let response = await fetch('https://socialbackend2.onrender.com/api/posts/updateProfilePic',{
             method:"PUT",
             headers:{
                 'content-type':'application/json'
@@ -60,7 +60,7 @@ useEffect(()=>{
     }
 
     const updateCoverPic = async()=>{
-         let response = await fetch('http://localhost:2000/api/posts/updateCoverPic',{
+         let response = await fetch('https://socialbackend2.onrender.com/api/posts/updateCoverPic',{
             method:"PUT",
             headers:{
                 'content-type':'application/json'

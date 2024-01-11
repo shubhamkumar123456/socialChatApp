@@ -7,7 +7,7 @@ const initialState = {
 export const fetchPost = createAsyncThunk('fetchpost',async()=>{
     let userId = JSON.parse(localStorage.getItem('login'))._id;
     console.log(userId)
-    let response = await fetch(`http://localhost:2000/api/posts/getsinglePost/${userId}`)
+    let response = await fetch(`https://socialbackend2.onrender.com/api/posts/getsinglePost/${userId}`)
       let userPost = response.json();
     //   console.log(userDetails)
       return userPost
