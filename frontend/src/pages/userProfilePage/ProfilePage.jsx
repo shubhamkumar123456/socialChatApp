@@ -133,7 +133,7 @@ useEffect(()=>{
                     <p className='profileName'>{userDetail.name}</p>
                 </div>
             </div>
-            {userPost.length>0 && <div className='profilePageAllPost'>
+            {userPost && <div className='profilePageAllPost'>
                 {userPost.map((post) =>{
                     return  <div key={post._id} className='profilepagePostBox'>
                         <p className='postBoxTitle'>{post.desc}</p>
