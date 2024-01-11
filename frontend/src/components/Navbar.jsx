@@ -50,12 +50,40 @@ const Navbar = () => {
   const handleToggleShow =()=>{
     setshowResponsive(!showResponsive)
   }
-  useEffect(()=>{
-    if(window.innerWidth<1000){
-      console.log("toggler")
-      settoggler(false)
+  const [screenSize, setScreenSize] = useState(getCurrentDimension());
+
+  function getCurrentDimension(){
+    return {
+        width: window.innerWidth,
+        height: window.innerHeight
     }
-  },[window.innerWidth])
+  }
+
+  useEffect(() => {
+      const updateDimension = () => {
+          setScreenSize(getCurrentDimension())
+      }
+      window.addEventListener('resize', updateDimension);
+
+      if(screenSize.width>1000){
+        setshowResponsive(true)
+      }else{
+        setshowResponsive(false)
+      }
+  
+  
+      return(() => {
+          window.removeEventListener('resize', updateDimension);
+      })
+  }, [screenSize])
+  // console.log(screenSize.width)
+
+  const handleLinkCLick =()=>{
+    if(screenSize.width<1000){
+
+      setshowResponsive(false)
+    }
+  }
 
   return (
     <div className={Css.navbar}>
@@ -71,7 +99,7 @@ const Navbar = () => {
             <div className={Css.datalist}>
               {firends.length > 0 && <i onClick={handleSerchClose} className={`bi bi-x ${Css.searchFriendCloseIcon}`}></i>}
               {firends && firends.map((ele) => {
-                return <Link state={ele} to={'/friends'} className={Css.data}>
+                return <Link key={ele._id} state={ele} to={'/friends'} className={Css.data}>
                   <p>{ele.name}</p>
                   <img className={Css.dataPic} src={ele.profilePicture ? ele.profilePicture : "https://www.basantfinance.com/images/default-userimg.png"} alt="" />
                 </Link>
@@ -80,15 +108,15 @@ const Navbar = () => {
             <i className={`bi bi-search ${Css.searchIcon}`} onClick={handleSearchClick}></i>
           </div>
         </li>
-        <li className={Css.navListLi}><Link to={'/'} className={Css.navListLink}>Home</Link></li>
+        <li className={Css.navListLi}><Link onClick={handleLinkCLick} to={'/'} className={Css.navListLink}>Home</Link></li>
         {/* <li className={Css.navListLi}><Link to={'/login'} className={Css.navListLink}>Login</Link></li>
         
         <li className={Css.navListLi}><Link to={'/signup'} className={Css.navListLink}>Signup</Link></li> */}
-        <li className={Css.navListLi}><Link to={'/followers'} className={Css.navListLink}>Followers</Link></li>
-        <li className={Css.navListLi}><Link to={'/following'} className={Css.navListLink}>Followings</Link></li>
+        <li className={Css.navListLi}><Link onClick={handleLinkCLick} to={'/followers'} className={Css.navListLink}>Followers</Link></li>
+        <li className={Css.navListLi}><Link onClick={handleLinkCLick} to={'/following'} className={Css.navListLink}>Followings</Link></li>
         {/* <li className={Css.navListLi}><Link to={'/friends'} className={Css.navListLink}>Friends</Link></li> */}
         <li className={Css.navListLi}>
-          <Link to={'/messages'} style={{display:"flex",textDecoration:"none",alignItems:"center", height:"100%",color:"black"}}>
+          <Link onClick={handleLinkCLick}  to={'/messages'} style={{display:"flex",textDecoration:"none",alignItems:"center", height:"100%",color:"black"}}>
            Messages
 
           </Link>

@@ -120,15 +120,44 @@ useEffect(()=>{
 },[handleSendMessage,arrivalMsg])
 console.log(arrivalMsg)
 
+const [showSidebar, setshowSidebar] = useState(false);
+
+const [screenSize, setScreenSize] = useState(getCurrentDimension());
+
+function getCurrentDimension(){
+  return {
+      width: window.innerWidth,
+      height: window.innerHeight
+  }
+}
+
+useEffect(() => {
+    const updateDimension = () => {
+        setScreenSize(getCurrentDimension())
+    }
+    window.addEventListener('resize', updateDimension);
+
+    if(screenSize.width>1000){
+        setshowSidebar(true)
+    }else{
+        setshowSidebar(false)
+    }
+
+
+    return(() => {
+        window.removeEventListener('resize', updateDimension);
+    })
+}, [screenSize])
+
 
 
     return (
         <div className='chatComponent'>
-            <div className="chatCompontnLeft">
+           {showSidebar && <div className="chatCompontnLeft">
            
       <FriendList/>
    
-            </div>
+            </div>}
             <div className="chatCompontnRight">
                 <div className="chatComponentChatBox">
                     <div className='chatComponentHeader'>

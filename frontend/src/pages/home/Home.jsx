@@ -74,6 +74,8 @@ const Home = () => {
   return (
     <div className='homepgae'>
       <div className='homePageLeft'>
+      {/* <i  className="bi bi-x-circle-fill"></i>
+      <i   className={`bi bi-list`}></i> */}
       <FriendList/>
       </div>
       <div className='homePageRight'>

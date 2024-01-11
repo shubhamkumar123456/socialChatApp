@@ -132,6 +132,27 @@ min-height: 91vh;
     font-size: 30px;
     cursor: pointer;
 }
+@media only screen and (max-width: 999px){
+.homepgae{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+.homePageLeft{
+    /* position: absolute;
+    left: 0;
+    z-index: 10;
+    top: 0;
+    width: 200px;
+    min-height: 100vh; */
+    display: none;
+    /* background-color: #FFE47A; */
+}
+
+}
 
 @media only screen and (max-width: 520px){
     .hpRightContainer{

@@ -37,10 +37,12 @@
 }
 .datalist{
     position: absolute;
-    top: 100%;
+    top: 102%;
     background-color: white;
-    width: 80%;
+    width: 95%;
     left: 10px;
+    z-index: 11;
+    border-radius: 10%;
 }
 .data{
     border-bottom: 1px solid red;
@@ -152,6 +154,7 @@
         top: 100%;
         width: 100%;
         background-color: #f60;
+        padding-top: 20px;
 
         height: 350px;
         left: 0;
