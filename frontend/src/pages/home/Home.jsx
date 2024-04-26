@@ -91,8 +91,8 @@ const Home = () => {
             </div>
            {inputValue && <div className='previewPost'>
             <i onClick={handleCancelPreview}  className="bi bi-x-circle-fill closeIcon"></i>
-                  <p>{inputRef.current.value}</p>
                   <img className='previewImg' src={inputValue} alt="" />
+                  <p>{inputRef.current.value}</p>
                   <button onClick={handlePost}  className='btnPost'>Post</button>
             </div>}
           </div>
